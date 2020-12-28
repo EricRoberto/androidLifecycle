@@ -1,4 +1,13 @@
 package com.example.android.dessertclicker
 
-class ClickerAplication {
+import android.app.Application
+import timber.log.Timber
+
+class ClickerAplication : Application() {
+
+    override fun onCreate() {
+        super.onCreate()
+
+        Timber.plant(Timber.DebugTree())
+    }
 }
